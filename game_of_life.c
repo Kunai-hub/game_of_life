@@ -22,11 +22,11 @@ int main() {
     int sec = 150;
     int speed = 3;
     int gen = 1;
-    printf("\033[0d\033[2J");
+    printf("\033[0d\033[2J");  //очистка терминала
     while (1) {
         output(data, gen, speed);
         life_data(data);
-        printf("\033[0d\033[2J");
+        printf("\033[0d\033[2J");  //очистка терминала
         mssleep(sec);
         if (kbhit()) {
             char ch = getchar();
@@ -46,7 +46,7 @@ int main() {
         }
         gen++;
     }
-    printf("\033[0d\033[2J");
+    printf("\033[0d\033[2J");  //очистка терминала
     clear_data(data);
     return 0;
 }
